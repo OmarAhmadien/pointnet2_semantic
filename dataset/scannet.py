@@ -78,7 +78,7 @@ class Dataset():
             if isvalid:
                 break
         if visu:
-             return index, curchoice, np.histogram(cur_semantic_seg, range(22))[0], seed_idx
+             return index, curchoice, np.histogram(cur_semantic_seg, range(self.num_classes+1))[0], seed_idx
         choice = np.random.choice(len(cur_semantic_seg), self.npoints, replace=True)
         point_set = cur_point_set[choice,:]
         semantic_seg = cur_semantic_seg[choice]      
