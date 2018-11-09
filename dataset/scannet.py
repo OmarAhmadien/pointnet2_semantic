@@ -13,7 +13,7 @@ use_color, box_size, dropout_max, accept_rate : not used !
 """
 
 class Dataset():
-	def __init__(self, npoints, split, use_color, box_size, path, dropout_max, accept_rate):
+    def __init__(self, npoints, split, use_color, box_size, path, dropout_max, accept_rate):
         if use_color:
             print("WARNING : no color available on scannet dataset. Setting use_color to false")
             self.use_color = False
